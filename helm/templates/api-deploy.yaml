@@ -29,7 +29,7 @@ spec:
         imagePullPolicy: Always
         env:
           - name: APP_BACKEND
-            value: "iscii"
+            value: "ascii"
           - name: APP_DATASTORE
             value: "data"
           - name: APP_DB
