@@ -9,6 +9,8 @@ spec:
       - /api
       - /ascii
       - /img
+      - /ml5
+      - /models
 ---
 apiVersion: networking.k8s.io/v1
 kind: Ingress
@@ -50,3 +52,17 @@ spec:
                 name: go-demo-app-front
                 port:
                   number: 80
+          - path: /ml5
+            pathType: Prefix
+            backend:
+              service:
+                name: demo-ml5
+                port:
+                  number: 80
+          - path: /models
+            pathType: Prefix
+            backend:
+              service:
+                name: demo-ml5
+                port:
+                  number: 80                  
