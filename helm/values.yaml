@@ -51,6 +51,7 @@ nats:
 ns:
   enable: false
 api-gateway:
+  enable: false
   image:
     tag: 0.51.2
   service:
