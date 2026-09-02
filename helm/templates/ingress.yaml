@@ -56,13 +56,13 @@ spec:
             pathType: Prefix
             backend:
               service:
-                name: demo-ml5
+                name: {{ .Release.Name }}-ml5
                 port:
                   number: 80
           - path: /models
             pathType: Prefix
             backend:
               service:
-                name: demo-ml5
+                name: {{ .Release.Name }}-ml5
                 port:
                   number: 80                  
